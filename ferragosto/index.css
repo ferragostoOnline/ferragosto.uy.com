@@ -1,0 +1,304 @@
+/*/* ==== ESTILOS GENERALES ==== */
+body {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* ==== ENCABEZADO ==== */
+
+.header {
+    display: flex;
+    justify-content: space-between; /* Logo a la izquierda, buscador a la derecha */
+    align-items: center;
+    padding: 20px 80px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.05);
+    gap: 60px;
+}
+
+/* Contenedor del logo + texto */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Imagen del logo */
+.logo {
+    height: 80px;
+    margin-right: 10px;
+    margin-left: 100px;
+}
+
+/* Texto del logo */
+.texto-logo h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+    color: #1d3557;
+}
+
+.texto-logo p {
+    margin: 0;
+    font-size: 14px;
+    color: #1d3557;
+}
+
+
+
+/* ==== BUSCADOR ==== */
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+   
+}
+
+.search-input {
+    border: none;
+    padding: 8px 12px;
+    outline: none;
+    font-size: 16px;
+    width: 500px;
+     margin-right: 60px;
+   
+}
+
+.search-btn {
+    background-color: #1d3557;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-btn:hover {
+    background-color: #16324f;
+}
+
+
+/* ==== SECCIÓN PRINCIPAL (HERO) ==== */
+.hero {
+    /*display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #9c845c; /* Color marrón de fondo 
+    padding: 40px 20px;
+    flex-wrap: wrap;*/
+    width: 100vw; /* ancho del viewport */
+  height: 80vh; /* o el alto que desees */
+  overflow:hidden;
+  position: relative;
+}
+
+/* Imagen principal */
+.hero-image{
+   display: flex;
+  width: 300vw; /* si tenés 3 imágenes, 3x100% */
+       animation: deslizar 25s infinite;
+ /* Agrega una transición suave */
+}
+.hero-image img {
+    width: 100vw;
+  height: 80vh;
+  object-fit: cover;
+}
+
+
+ @keyframes deslizar {
+      /* Aquí se define el movimiento */
+      0%, 16.6% { transform: translateX(0); }         /* Imagen 1 */
+      20%, 36.6% { transform: translateX(-100vw); }   /* Imagen 2 */
+      40%, 56.6% { transform: translateX(-200vw); }   /* Imagen 3 */
+     
+      100% { transform: translateX(0); }
+    }
+
+
+
+/* Texto principal */
+.hero-text {
+    color: white;
+    font-size: 28px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.hero-text h2 {
+    font-weight: normal;
+}
+
+.main-content {
+  padding: 20px;
+}
+
+.seccion-productos {
+  margin-bottom: 30px;
+}
+
+.titulo-seccion {
+  font-size: 2rem;
+  color: #2c3e50; /* Un color oscuro para el título */
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ddd;
+}
+
+.productos-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.producto-card {
+  background-color: #2c3e50; /* Color de fondo oscuro como en la imagen */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 280px; /* Ajusta el ancho según necesites */
+}
+
+.producto-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.info-producto {
+  padding: 15px;
+  color: white; /* Texto blanco sobre el fondo oscuro */
+  display: flex;
+  flex-direction: column;
+}
+
+.nombre-producto {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.precio-producto {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* ==== FOOTER ==== */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid #ddd;
+    padding: 8px 0;
+}
+
+.footer nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer img {
+    width: 22px;
+    height: 22px;
+}
+ 
+
+/* celular o tablet*/
+
+/* ==== ESTILOS RESPONSIVOS ==== */
+@media (max-width: 1024px) {
+  /* Tablets */
+  .header {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .logo {
+    margin-left: 0;
+    height: 60px;
+  }
+
+  .search-input {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .search-container {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .productos-contenedor {
+    justify-content: center;
+  }
+
+  .producto-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Celulares */
+  .header {
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+  }
+ 
+  .logo {
+    margin-left: 0;
+    height: 50px;
+  }
+
+  .texto-logo h1 {
+    font-size: 18px;
+  }
+
+  .texto-logo p {
+    font-size: 12px;
+  }
+
+  .search-input {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .search-btn {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .hero {
+    height: auto;
+
+  }
+
+  .hero-image img {
+
+    width: 100vw;
+    height: auto;         /* que el alto se ajuste automáticamente */
+    object-fit: contain; 
+  }
+
+  .producto-card {
+    width: 90%;
+  }
+
+  .titulo-seccion {
+    font-size: 1.5rem;
+  }
+  
+}
